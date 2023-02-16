@@ -51,6 +51,10 @@
 		embedded_svc.addEventHandler("onChatEndedByChatbot", function(data) {
 		    console.log("onChatEndedByChatbot event was fired.  liveAgentSessionKey was " + data.liveAgentSessionKey);
 		});
+		
+		embedded_svc.addEventHandler("afterDestroy", function(data) {
+		    console.log("afterDestroy event was fired.  liveAgentSessionKey was " + data.liveAgentSessionKey);
+		});
 
 		embedded_svc.init(
 			'https://enelsud--preprod.my.salesforce.com',
